@@ -4,12 +4,11 @@ import json
 
 
 class ElasticsearchDAO(object):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, elasticsearch_api_base_url=None):
+        self.elasticsearch_api_base_url = elasticsearch_api_base_url
 
     def write_to_elasticsearch(self, metrics):
-        ELASTICSEARCH_API_BASE_URL = os.environ.get('ELASTICSEARCH_API_BASE_URL')\
-                                     if os.environ.get('ELASTICSEARCH_API_BASE_URL') is not None else 'http://localhost'
+
         document = ''
         for metric in metrics:
             line_obj = {}
@@ -24,7 +23,7 @@ class ElasticsearchDAO(object):
         if document != '':
             print('Writing data to ES')
             header = {'Content-type': 'application/json'}
-            es_post_response = requests.post(f'{ELASTICSEARCH_API_BASE_URL}/_bulk', data=document, headers=header)
+            es_post_response = requests.post(f'{self.elasticsearch_api_base_url}/_bulk', data=document, headers=header)
             print(f'Data written to ES: {es_post_response.status_code} {es_post_response.reason} ({len(metrics)})')
 
     def map_obj_doc(self, metric, line_obj_doc):
