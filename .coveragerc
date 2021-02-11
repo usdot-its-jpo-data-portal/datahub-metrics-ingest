@@ -1,0 +1,5 @@
+[run]
+include =
+    datahub_metrics_ingest/*.py
+omit =
+    virtualenv_temp/*
