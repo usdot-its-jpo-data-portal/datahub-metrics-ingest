@@ -1,0 +1,58 @@
+[
+    {
+        "timestamp": "2021-01-11T00:00:00.000",
+        "value": "1",
+        "asset_uid": "ig7m-wygy",
+        "user_segment": "anonymous",
+        "access_type": "primer page view",
+        "asset_name": "Domestic Airline Consumer Airfare Report - Detailed Fare Information for All City-Pair Markets-2005 Q4"
+    },
+    {
+        "timestamp": "2021-01-11T17:00:00.000",
+        "value": "2",
+        "asset_uid": "ntts-pk3f",
+        "user_segment": "anonymous",
+        "access_type": "primer page view",
+        "asset_name": "Seattle I-405 Simulated Basic Safety Message"
+    },
+    {
+        "timestamp": "2021-01-11T22:00:00.000",
+        "value": "1",
+        "asset_uid": "ntts-pk3f",
+        "user_segment": "anonymous",
+        "access_type": "primer page view",
+        "asset_name": "Seattle I-405 Simulated Basic Safety Message"
+    },
+    {
+        "timestamp": "2021-01-11T22:00:00.000",
+        "value": "1",
+        "asset_uid": "e8av-qz9y",
+        "user_segment": "anonymous",
+        "access_type": "primer page view",
+        "asset_name": "Basic Safety Message Data Emulator"
+    },
+    {
+        "timestamp": "2021-01-12T04:00:00.000",
+        "value": "1",
+        "asset_uid": "ntts-pk3f",
+        "user_segment": "anonymous",
+        "access_type": "primer page view",
+        "asset_name": "Seattle I-405 Simulated Basic Safety Message"
+    },
+    {
+        "timestamp": "2021-01-13T18:00:00.000",
+        "value": "1",
+        "asset_uid": "ntts-pk3f",
+        "user_segment": "anonymous",
+        "access_type": "primer page view",
+        "asset_name": "Seattle I-405 Simulated Basic Safety Message"
+    },
+    {
+        "timestamp": "2021-01-16T09:00:00.000",
+        "value": "2",
+        "asset_uid": "e8av-qz9y",
+        "user_segment": "anonymous",
+        "access_type": "primer page view",
+        "asset_name": "Basic Safety Message Data Emulator"
+    }
+]
