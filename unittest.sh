@@ -10,6 +10,7 @@ pip install -r requirements_dev.txt
 pip install -r requirements.txt
 virtualenv_temp/bin/coverage run -m pytest
 virtualenv_temp/bin/coverage report -m
+virtualenv_temp/bin/coverage xml
 echo "Unit tests complete."
 echo "Deactivating Virtualenv..."
 deactivate
