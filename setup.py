@@ -6,9 +6,8 @@ Accessed February 10, 2021
 
 import setuptools
 
-# with open("README.md", "r", encoding="utf-8") as fh:
-#     long_description = fh.read()
-long_description = ''
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
 
 setuptools.setup(
     name="datahub_metrics_ingest",
