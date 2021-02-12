@@ -1,10 +1,10 @@
 import csv
 import io
-
+from typing import List, Dict
 from datahub_metrics_ingest.DHMetric import DHMetric
 
 
-def read_csv(infile: io.TextIOWrapper) -> list[dict[str, str]]:
+def read_csv(infile: io.TextIOWrapper) -> List[Dict[str, str]]:
     recs = []
     process_line = lambda line: [i.strip() for i in line.split(',')]
     
