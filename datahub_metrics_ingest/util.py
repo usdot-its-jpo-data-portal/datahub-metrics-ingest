@@ -6,7 +6,8 @@ from datahub_metrics_ingest.DHMetric import DHMetric
 
 def read_csv(infile: io.TextIOWrapper) -> List[Dict[str, str]]:
     recs = []
-    process_line = lambda line: [i.strip() for i in line.split(',')]
+    str_line = lambda line: line.decode('utf-8') if type(line) == bytes else line
+    process_line = lambda line: [i.strip() for i in str_line(line).split(',')]
     
     line = infile.readline()
     headers = process_line(line)
