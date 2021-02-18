@@ -14,7 +14,14 @@ jobs:
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       - name: Run unit test
-        run: sh unittest.sh
+        run: |
+          pip install "pytest<5"
+          pip install .
+          pip install -r requirements_dev.txt
+          pip install -r requirements.txt
+          coverage run -m pytest
+          coverage report -m
+          coverage xml
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
