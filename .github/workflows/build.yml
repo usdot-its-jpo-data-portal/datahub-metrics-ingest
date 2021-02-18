@@ -25,3 +25,4 @@ jobs:
             -Dsonar.verbose=true
             -Dsonar.inclusions=datahub_metrics_ingest/*
             -Dsonar.coverage.exclusions=test_*.py
+            -Dsonar.tests=tests/
