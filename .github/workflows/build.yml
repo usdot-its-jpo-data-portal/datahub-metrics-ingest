@@ -13,6 +13,8 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: Run unit test
+        run: sh unittest.sh
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
@@ -20,6 +22,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
+            -Dsonar.python.coverage.reportPaths=coverage.xml
             -Dsonar.language=py
             -Dsonar.verbose=true
             -Dsonar.inclusions=datahub_metrics_ingest/*
