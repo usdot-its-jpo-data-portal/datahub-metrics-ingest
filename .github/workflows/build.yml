@@ -21,6 +21,7 @@ jobs:
         with:
           args: >
             -Dsonar.python.coverage.reportPaths=coverage.xml
-            -Dsonar.exclusions=test_*.py 
             -Dsonar.language=py
             -Dsonar.verbose=true
+            -Dsonar.inclusions=datahub_metrics_ingest/
+            -Dsonar.coverage.exclusions=test_*.py
