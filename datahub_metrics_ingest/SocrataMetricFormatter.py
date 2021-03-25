@@ -7,7 +7,7 @@ class SocrataMetricFormatter(FormatterInterface):
     def __init__(self):
         pass  #intentionally empty constructor
 
-    def get_data_objects(self, metrics) -> [DHMetric]:
+    def get_data_objects(self, metrics, source_name) -> [DHMetric]:
         # aggregate hourly metric to daily metric
         daily_metric_dict = {}
         for m in metrics:
@@ -25,7 +25,7 @@ class SocrataMetricFormatter(FormatterInterface):
             dm = DHMetric()
             dm.timestamp = date
             dm.granularity = 'daily'
-            dm.dh_source_name = 'scgc'
+            dm.dh_source_name = source_name
             dm.dh_id = f'{dm.dh_source_name}-{asset_uid}'
             dm.user_segment = user_segment
             dm.access_type = access_type

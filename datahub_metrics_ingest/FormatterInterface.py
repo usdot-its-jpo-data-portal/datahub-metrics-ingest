@@ -7,5 +7,5 @@ class FormatterInterface(ABC):
         super().__init__()
 
     @abstractmethod
-    def get_data_objects(self, metric) -> [DHMetric]:
+    def get_data_objects(self, metric, source_name) -> [DHMetric]:
         raise NotImplementedError
